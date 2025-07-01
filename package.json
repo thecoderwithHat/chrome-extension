@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build:ext": "tsc src/background.ts --outDir public --module commonjs --target ES2020 && tsc src/content.ts --outDir public --module commonjs --target ES2020",
+    "watch:ext": "tsc src/background.ts --outDir public --module commonjs --target ES2020 --watch & tsc src/content.ts --outDir public --module commonjs --target ES2020 --watch"
   },
   "dependencies": {
     "react": "^19.0.0",
